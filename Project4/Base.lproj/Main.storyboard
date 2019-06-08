@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14810.11" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14810.11"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -673,7 +675,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Project4" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -682,17 +684,144 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
+                <windowController id="B8D-0N-5wS" customClass="WindowController" customModule="Project4" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="contentRect" x="196" y="240" width="800" height="600"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <value key="minSize" type="size" width="800" height="600"/>
+                        <toolbar key="toolbar" implicitIdentifier="3867D90D-33B9-4EFD-BAEA-672C9A50021E" autosavesConfiguration="NO" allowsUserCustomization="NO" displayMode="iconOnly" sizeMode="regular" id="g9e-cA-QTo">
+                            <allowedToolbarItems>
+                                <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="DRa-7s-RY4"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="DWd-Mc-8gN"/>
+                                <toolbarItem implicitItemIdentifier="1308FC0E-EAD3-4225-BE74-E77A85C7430B" label="" paletteLabel="" sizingBehavior="auto" id="m7K-Y6-OvP">
+                                    <nil key="toolTip"/>
+                                    <segmentedControl key="view" verticalHuggingPriority="750" id="WnK-E6-GvU">
+                                        <rect key="frame" x="0.0" y="14" width="71" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <segmentedCell key="cell" borderStyle="border" alignment="left" style="roundRect" trackingMode="momentary" id="s9W-U2-dRr">
+                                            <font key="font" metaFont="cellTitle"/>
+                                            <segments>
+                                                <segment image="NSGoLeftTemplate" width="32"/>
+                                                <segment image="NSGoRightTemplate" width="32" tag="1"/>
+                                            </segments>
+                                        </segmentedCell>
+                                    </segmentedControl>
+                                    <connections>
+                                        <action selector="navigationClicked:" target="Oky-zY-oP4" id="B4n-50-K1V"/>
+                                    </connections>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="CD19CA5A-7233-4813-A7A3-4D350F182772" label="" paletteLabel="" sizingBehavior="auto" id="6lK-Pm-mpm">
+                                    <nil key="toolTip"/>
+                                    <segmentedControl key="view" verticalHuggingPriority="750" id="6ax-P5-gFC">
+                                        <rect key="frame" x="0.0" y="14" width="71" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <segmentedCell key="cell" borderStyle="border" alignment="left" style="roundRect" trackingMode="momentary" id="kKc-36-zvN">
+                                            <font key="font" metaFont="cellTitle"/>
+                                            <segments>
+                                                <segment image="NSAddTemplate" width="32"/>
+                                                <segment image="NSRemoveTemplate" width="32" tag="1"/>
+                                            </segments>
+                                        </segmentedCell>
+                                    </segmentedControl>
+                                    <connections>
+                                        <action selector="adjustRows:" target="Oky-zY-oP4" id="4a9-Mn-RI6"/>
+                                    </connections>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="0A47A2A5-4FD6-4FDF-8317-77408532F138" label="" paletteLabel="" sizingBehavior="auto" id="nvi-de-AtY">
+                                    <nil key="toolTip"/>
+                                    <segmentedControl key="view" verticalHuggingPriority="750" id="Kz0-8i-cOd">
+                                        <rect key="frame" x="0.0" y="14" width="71" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <segmentedCell key="cell" borderStyle="border" alignment="left" style="roundRect" trackingMode="momentary" id="RAX-k8-RNk">
+                                            <font key="font" metaFont="cellTitle"/>
+                                            <segments>
+                                                <segment image="NSAddTemplate" width="32"/>
+                                                <segment image="NSRemoveTemplate" width="32" tag="1"/>
+                                            </segments>
+                                        </segmentedCell>
+                                    </segmentedControl>
+                                    <connections>
+                                        <action selector="adjustColumns:" target="Oky-zY-oP4" id="OrF-fu-vSS"/>
+                                    </connections>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="110AEC39-2A3D-48EF-829F-92DC5B0BB50D" label="" paletteLabel="" id="hH4-UU-p9s">
+                                    <nil key="toolTip"/>
+                                    <size key="minSize" width="96" height="22"/>
+                                    <size key="maxSize" width="4000" height="22"/>
+                                    <textField key="view" verticalHuggingPriority="750" id="00B-5H-G9j">
+                                        <rect key="frame" x="0.0" y="14" width="96" height="22"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Enter URL..." drawsBackground="YES" id="Mg8-dX-ed3">
+                                            <font key="font" usesAppearanceFont="YES"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <connections>
+                                        <action selector="urlEntered:" target="Oky-zY-oP4" id="LSy-U3-TJI"/>
+                                    </connections>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="BBEBD65B-7289-43E2-9E01-A4934DF280E4" label="" paletteLabel="" sizingBehavior="auto" id="Hks-OL-PJb">
+                                    <nil key="toolTip"/>
+                                    <textField key="view" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="84I-aS-wKg">
+                                        <rect key="frame" x="0.0" y="14" width="41" height="17"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Rows" id="i1e-kB-S0f">
+                                            <font key="font" usesAppearanceFont="YES"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="8EC6648C-2BE0-45B3-94FA-1FF19CA68047" label="" paletteLabel="" sizingBehavior="auto" id="Plf-yw-oYP">
+                                    <nil key="toolTip"/>
+                                    <textField key="view" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Arm-k9-ACg">
+                                        <rect key="frame" x="0.0" y="14" width="35" height="17"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Cols" id="OP3-l6-wGa">
+                                            <font key="font" usesAppearanceFont="YES"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="6694CB18-34F6-4203-9F63-8F69D2099D99" label="" paletteLabel="" image="NSRefreshTemplate" sizingBehavior="auto" id="dph-Xm-UeW">
+                                    <nil key="toolTip"/>
+                                    <button key="view" verticalHuggingPriority="750" id="hTK-1q-FqR" userLabel="Reload Button">
+                                        <rect key="frame" x="0.0" y="14" width="24" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSRefreshTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wFb-mT-gcV">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                    </button>
+                                    <connections>
+                                        <action selector="refreshPage:" target="Oky-zY-oP4" id="DCK-gO-1By"/>
+                                    </connections>
+                                </toolbarItem>
+                            </allowedToolbarItems>
+                            <defaultToolbarItems>
+                                <toolbarItem reference="m7K-Y6-OvP"/>
+                                <toolbarItem reference="DRa-7s-RY4"/>
+                                <toolbarItem reference="hH4-UU-p9s"/>
+                                <toolbarItem reference="dph-Xm-UeW"/>
+                                <toolbarItem reference="DRa-7s-RY4"/>
+                                <toolbarItem reference="Hks-OL-PJb"/>
+                                <toolbarItem reference="6lK-Pm-mpm"/>
+                                <toolbarItem reference="DRa-7s-RY4"/>
+                                <toolbarItem reference="Plf-yw-oYP"/>
+                                <toolbarItem reference="nvi-de-AtY"/>
+                            </defaultToolbarItems>
+                        </toolbar>
                         <connections>
-                            <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
+                            <outlet property="delegate" destination="B8D-0N-5wS" id="j6x-A5-JGl"/>
                         </connections>
                     </window>
                     <connections>
+                        <outlet property="addressEntry" destination="00B-5H-G9j" id="GRn-fl-Jqs"/>
+                        <outlet property="reloadButton" destination="hTK-1q-FqR" id="bxI-3F-QM8"/>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
                     </connections>
                 </windowController>
@@ -703,7 +832,7 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Project4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -714,4 +843,11 @@
             <point key="canvasLocation" x="75" y="655"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NSAddTemplate" width="11" height="11"/>
+        <image name="NSGoLeftTemplate" width="9" height="12"/>
+        <image name="NSGoRightTemplate" width="9" height="12"/>
+        <image name="NSRefreshTemplate" width="11" height="15"/>
+        <image name="NSRemoveTemplate" width="11" height="11"/>
+    </resources>
 </document>
