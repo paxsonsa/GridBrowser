@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1410011722ABC69800475C27 /* example.png in Resources */ = {isa = PBXBuildFile; fileRef = 1410011622ABC69800475C27 /* example.png */; };
 		14C410C8229929790002B4F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C410C7229929790002B4F9 /* AppDelegate.swift */; };
 		14C410CA229929790002B4F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C410C9229929790002B4F9 /* ViewController.swift */; };
 		14C410CC2299297A0002B4F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14C410CB2299297A0002B4F9 /* Assets.xcassets */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1410011422ABC59B00475C27 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		1410011622ABC69800475C27 /* example.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = example.png; sourceTree = "<group>"; };
 		14C410C4229929790002B4F9 /* Project4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14C410C7229929790002B4F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14C410C9229929790002B4F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,9 +39,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1410011522ABC5F800475C27 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				1410011622ABC69800475C27 /* example.png */,
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
 		14C410BB229929790002B4F9 = {
 			isa = PBXGroup;
 			children = (
+				1410011522ABC5F800475C27 /* img */,
+				1410011422ABC59B00475C27 /* README.md */,
 				14C410C6229929790002B4F9 /* Project4 */,
 				14C410C5229929790002B4F9 /* Products */,
 			);
@@ -130,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14C410CC2299297A0002B4F9 /* Assets.xcassets in Resources */,
+				1410011722ABC69800475C27 /* example.png in Resources */,
 				14C410CF2299297A0002B4F9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
